@@ -190,3 +190,11 @@ echo $AWS_EC2_INSTANCE_PUBLIC_IP
 chmod 400 myvpc-keypair.pem
 ssh -i myvpc-keypair.pem ec2-user@$AWS_EC2_INSTANCE_PUBLIC_IP
 exit
+
+
+
+aws ec2 allocate-address
+aws ec2 associate-address --instance-id i-07ffe74c7330ebf53
+aws ec2 associate-address --instance-id i-0b263919b6498b123 --allocation-id eipalloc-64d5890a
+
+aws ec2 describe-addresses

@@ -67,17 +67,17 @@ AWS_ROUTE_TABLE_ASSOID=$(aws ec2 associate-route-table  \
 ## Añadir etiqueta a la VPC
 aws ec2 create-tags \
 --resources $AWS_ID_VPC \
---tags "Key=Name,Value=myvpc"
+--tags "Key=Name,Value=SRIXX-vpc"	
  
 ## Añaadir etiqueta a la subred pública
 aws ec2 create-tags \
 --resources $AWS_ID_SubredPublica \
---tags "Key=Name,Value=SRIXX subred publica"
+--tags "Key=Name,Value=SRIXX-subred-publica"
 
 ## Añadir etiqueta a la puerta de enlace
 aws ec2 create-tags \
 --resources $AWS_ID_InternetGateway \
---tags "Key=Name,Value=SRIXX internet-gateway"
+--tags "Key=Name,Value=SRIXX-igw"
 
 ## Añadir etiqueta a la ruta por defecto
 AWS_DEFAULT_ROUTE_TABLE_ID=$(aws ec2 describe-route-tables \
@@ -91,4 +91,4 @@ aws ec2 create-tags \
 ## Añadir etiquetas a la tabla de rutas
 aws ec2 create-tags \
 --resources $AWS_ID_TablaRutas \
---tags "Key=Name,Value=SRIXX tabla de rutas"
+--tags "Key=Name,Value=SRIXX-rtb-public"
