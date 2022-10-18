@@ -11,7 +11,7 @@
 
 ## Definición de variables
 AWS_VPC_CIDR_BLOCK=10.22.0.0/16
-AWS_Subred_CIDR_BLOCK=10.22.1XX.0/24
+AWS_Subred_CIDR_BLOCK=10.22.130.0/24
 
 ## Crear una VPC (Virtual Private Cloud)
 AWS_VPC_ID=$(aws ec2 create-vpc \
