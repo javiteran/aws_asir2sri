@@ -198,3 +198,5 @@ aws ec2 associate-address --instance-id i-07ffe74c7330ebf53
 aws ec2 associate-address --instance-id i-0b263919b6498b123 --allocation-id eipalloc-64d5890a
 
 aws ec2 describe-addresses
+
+#aws ec2 delete-vpc --vpc-id vpc-??????
