@@ -1,6 +1,14 @@
-https://cloudaffaire.com/how-to-create-a-custom-vpc-using-aws-cli/		
-https://cloudaffaire.com/how-to-create-an-aws-ec2-instance-using-aws-cli/  
-		  
+###########################################################
+#       Creación de una instancia EC2
+#       con sus grupos de seguridad y puertos abiertos
+#      en AWS con AWS CLI
+#
+# Utilizado para AWS Academy Learning Lab
+#
+# Autor: Javier Terán González
+# Fecha: 20/10/2022
+###########################################################
+
 
 AWS_IP_UbuntuServer=10.22.130.100
 AWS_IP_WindowsServer=10.22.130.200
@@ -40,9 +48,6 @@ aws ec2 create-tags \
 --resources $AWS_DEFAULT_SECURITY_GROUP_ID \
 --tags "Key=Name,Value=myvpc-default-security-group"
 
-
-###########################################################
-##CREAR EC2
 
 ## Crear datos de usuario para Apache/PHP/Mariadb
 vi myuserdata.txt
